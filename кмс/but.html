@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
+    <style>
+    body{
+
+/*
+    z-index:1000;
+       box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.15);}
+*/
+</style>
+<script>
+
+var page=0;
+
+
+
+function firstpage(){page=1; parent.main.location.href="w1.html"}
+
+function lastpage(){page=10; parent.main.location.href="w12.html"}
+
+function nextpage(){page+=1; if (page>12) {alert("Конец книги!");page=12;} else {parent.main.location.href="w"+page+".html";}}
+
+function previouspage(){page-=1; if (page<0) {alert("Начало книги!");page=0;} else {parent.main.location.href="w"+page+".html";}}
+function aboutpage(){page=14; parent.main.location.href="about.html"}
+</script>
+</head>
+<body>
+  <div class="but1">    
+
+
+
+<button onclick="firstpage()" class="bubbly-button">В начало</button>
+
+<button onclick="previouspage()" class="bubbly-button" >Предыдущая</button>
+
+<button onclick="nextpage()" class="bubbly-button">Следующая</button>
+
+<button onclick="lastpage()" class="bubbly-button">В конец</button>
+      <button onclick="aboutpage()" class="bubbly-button">Автор</button>
+
+
+ </div>    
+</body>
+</html>

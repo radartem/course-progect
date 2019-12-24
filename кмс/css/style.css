@@ -1,0 +1,347 @@
+html {
+margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 12px;
+		font: inherit;
+		vertical-align: baseline;
+        font-family: "Proxima Nova", Tahoma, Verdana, sans-serif;
+         font-weight: 400;
+}
+
+.name{
+    text-align: center;
+}
+
+p {
+    text-indent: 1.5em;
+    margin: 0 0 12px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #555;
+   text-align: justify;
+
+}
+
+.but1{
+     text-indent: 1.5em;
+    margin: 0 0 12px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    overflow-y: hidden;
+    height: 60px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.leftimg {
+    float:left; /* Выравнивание по левому краю */
+    margin: 15px 15px 15px 0; /* Отступы вокруг картинки */
+   }
+
+#scale:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.rightimg  {
+    float: right; /* Выравнивание по правому краю  */ 
+    margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
+   }
+
+
+.centerimg  {
+    float: center; /* Выравнивание по правому краю  */ 
+    margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
+   }
+
+
+.section-container-spacer {
+    margin-top: 8%;
+    margin-bottom: 30px;
+    width: 95%;
+}
+
+.header1 {
+    position: fixed;
+    background-color: #fff;
+    height: 6em;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.sidebar {
+    bottom: 0;
+    width: 240px;
+    height: auto;
+   /* overflow-x: hidden;
+    overflow-y: auto;*/
+    background-color: #fff;
+    z-index: 999;
+    padding-left: 10%;
+}
+
+.nav {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+li{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    line-height: normal;
+    margin-bottom: 15px;
+   
+}
+
+.nav li a:hover {
+    color:#00baff;
+}
+
+
+.bubbly-button {
+  font-family: "Proxima Nova", Tahoma, Verdana, sans-serif;
+  font-weight: 500;
+  display: inline-block;
+  font-size: 14px;
+  padding: 1em 2em;
+  margin-top: 0px;
+ margin-left: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #00baff;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+/*  box-shadow: 0 2px 15px rgba(0, 186, 255, 0.46);*/
+}
+.bubbly-button:focus {
+  outline: 0;
+}
+.bubbly-button:before, .bubbly-button:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+
+
+.bubbly-button:active {
+  transform: scale(0.9);
+  background-color: #01a6e3;
+  box-shadow: 0 2px 15px rgba(0, 186, 255, 0.19);
+}
+
+
+#image {
+	cursor: zoom-in;
+}
+
+.popup {
+	position: absolute;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	display:none;
+	text-align:center;
+}
+
+.popup_bg {
+	background:rgb(255, 255, 255);
+	position:fixed;
+	z-index:1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: auto;
+  height: auto;
+}
+
+
+.popup_img {
+	position: fixed;
+	z-index:2;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	max-height: 90%;
+}
+
+.popup_img {
+  pointer-events: none;
+}
+
+.dialog .label {
+    transform: rotate(270deg);
+    width: 460px;
+    height: 20px;
+    text-align: center;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: -75%;
+    margin-top: 68%;
+    cursor: pointer;
+}
+
+.dialog {
+    position: fixed;
+    top: 60%;
+    left: 100%;
+    width: 300px;
+    height: 350px;
+    margin-left: -25px;
+    margin-top: -215px;
+    padding: 10px;
+    /*border: #000 2px solid;*/
+    border-radius: 10px;
+    background: #fff;
+    color: #000;
+    z-index: 1000;
+    font-size: 12pt;
+            -webkit-box-shadow: 1px 1px 20px 0px rgba(25, 25, 25, 0.1);
+    -moz-box-shadow: 1px 1px 20px 0px  rgba(25, 25, 25, 0.1);
+    box-shadow: 1px 1px 20px 0px  rgba(25, 25, 25, 0.1);
+}
+
+.dialog .header {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: -220px;
+}
+
+
+
+.dialog .history {
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+        -webkit-box-shadow: 1px 1px 20px 0px rgba(25, 25, 25, 0.1);
+    -moz-box-shadow: 1px 1px 20px 0px  rgba(25, 25, 25, 0.1);
+    box-shadow: 1px 1px 20px 0px  rgba(25, 25, 25, 0.1);
+}
+
+.dialog input, .dialog button, .dialog .history {
+    margin: 2px 25px;
+    width: 85%;
+   /* border: 1px #666 solid;*/
+    border-radius: 4px;
+    font-size: 14px;
+      font-family: "Proxima Nova", Tahoma, Verdana, sans-serif;
+         font-weight: 400;
+}
+
+.dialog button{
+     font-family: "Proxima Nova", Tahoma, Verdana, sans-serif;
+  font-weight: 500;
+  display: inline-block;
+  font-size: 14px;
+  padding: 1em 2em;
+  
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #00baff;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+}
+
+.dialog input{
+    margin-top: 10px;
+    height: 30px;
+    margin-bottom: 5px;
+    border:white;
+     -webkit-box-shadow: 1px 1px 20px 0px rgba(25, 25, 25, 0.1);
+    -moz-box-shadow: 1px 1px 20px 0px  rgba(25, 25, 25, 0.1);
+    box-shadow: 1px 1px 20px 0px  rgba(25, 25, 25, 0.1);
+}
+
+.bg {
+    background:rgba(0, 0, 0, 0.38);
+	position:fixed;
+	z-index:1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: auto;
+  height: auto;
+    cursor: pointer;
+}
+
+.alert_message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 440px;
+    margin-left: -150px;
+    margin-top: -200px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    color: #000;
+    z-index: 1000;
+     -webkit-box-shadow: 1px 1px 20px 0px rgba(25, 25, 25, 0.1);
+    -moz-box-shadow: 1px 1px 20px 0px  rgba(25, 25, 25, 0.1);
+    box-shadow: 1px 1px 20px 0px  rgba(25, 25, 25, 0.1);
+}
+
+.alert_message button{
+         font-family: "Proxima Nova", Tahoma, Verdana, sans-serif;
+  font-weight: 500;
+  display: inline-block;
+  font-size: 14px;
+  padding: 1em 2em;
+    width: 100%;
+  align-content: center;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #00baff;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+}
+
+.alert_message input{
+    margin-top: 10px;
+    height: 30px;
+    margin-bottom: 5px;
+    border:white;
+     -webkit-box-shadow: 1px 1px 20px 0px rgba(25, 25, 25, 0.1);
+    -moz-box-shadow: 1px 1px 20px 0px  rgba(25, 25, 25, 0.1);
+    box-shadow: 1px 1px 20px 0px  rgba(25, 25, 25, 0.1);
+}
+}
+
+embed {
+    width: 100%;
+}
+

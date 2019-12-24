@@ -1,0 +1,43 @@
+body{
+/*background-image: url("images/wave.png");*/
+    margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 12px;
+		font: inherit;
+		vertical-align: baseline;
+        font-family: "Proxima Nova", Tahoma, Verdana, sans-serif;
+    color:black;
+         font-weight: 400;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.name{
+    
+    text-align: center;
+    margin: 0;
+    height: 75px;
+}
+
+.name h3{
+    
+    text-align: center;
+    margin: 15px 0 0 0;
+  ;
+}
+
+.name h4{
+    
+    text-align: center;
+    margin: 10px 0 0 0;
+  ;
+}
+
+
+
+

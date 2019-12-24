@@ -1,0 +1,130 @@
+html {
+margin: 0;
+padding: 0;
+width: 100%;
+}
+
+body {
+margin: 0;
+padding: 0;
+width: 100%;
+text-align: center;
+background: url(../images/GL1.jpg) no-repeat 50% 50%;
+background-size: cover;
+height: 100%;
+display: table;
+}
+
+.wrapper {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+
+/*Анимированный ЛОГОТИП*/
+path {
+    stroke: #fff;
+    fill: #fff;
+    stroke-dasharray:4000;
+    opacity: 10;
+    animation: animate 1.8s cubic-bezier(0,0.23,1,.1);
+    
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        fill: none;
+        stroke-dashoffset: 4000;
+    }
+    30% {
+        opacity: 10;
+        fill: none;
+        stroke-dashoffset: 4000; 
+    }
+    90%{
+        fill: rgba(255,255,255,0);
+    }
+    100%{
+         opacity: 10;
+        fill: rgba(255,255,255,1);
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/*КНОПКА "На главную"*/
+button {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+button{
+    background-color: #FFF;
+    color: #393a3b;
+    width: 170px;
+    height: 45px;
+    border: 0px solid #00baff;
+    font-size: 16px;
+    font-family: "Proxima Nova", Tahoma, Verdana, sans-serif;
+    border-radius: 30px;
+    transition: .6s;
+    overflow: hidden;
+}
+
+button:focus{
+    outline: none;
+}
+
+button:before {
+    content: '';
+    display:block;
+    position: absolute;
+    background: rgba(255,255,255,.5);
+    width: 40px;
+    height: 100%;
+    left:0;
+    top:0;
+    opacity: .5s;
+    filter:blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+    color: #fff;
+}
+
+button:after {
+     content: '';
+    display:block;
+    position: absolute;
+    background: rgba(255,255,255,.2);
+    width: 40px;
+    height: 100%;
+    left:30px;
+    top:0;
+    opacity: .5s;
+    filter:blur(30px);
+    transform: translateX(-100px) skewX(-15deg);
+    color: #fff;
+}
+
+button:hover{
+    background: #00baff;
+    cursor: pointer;
+    color: #fff;    
+}
+
+button:hover:before {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .5s;
+    color: #fff;
+}
+
+button:hover:after {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: .5s;
+}
+

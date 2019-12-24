@@ -1,0 +1,263 @@
+fileFormatVersion: 2
+guid: 43c3e1644455343a1804a9904b6f3efa
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: arrow
+    100002: black001
+    100004: black002
+    100006: black003
+    100008: Box002
+    100010: Box003
+    100012: Box008
+    100014: Box009
+    100016: Box010
+    100018: Box011
+    100020: Cylinder002
+    100022: Cylinder003
+    100024: Cylinder014
+    100026: Cylinder016
+    100028: Cylinder018
+    100030: Cylinder019
+    100032: Cylinder020
+    100034: Cylinder021
+    100036: Cylinder022
+    100038: Cylinder023
+    100040: Cylinder024
+    100042: //RootNode
+    100044: Plane001
+    100046: texture_baraban
+    100048: "\u0420\u044B\u0447\u0430\u0433"
+    100050: "\u0431\u0430\u0440\u0430\u0431\u0430\u043D"
+    100052: "\u043C\u0438\u043A\u0440\u043E\u0441\u043A\u043E\u043F"
+    100054: "\u043E\u0431\u044A\u0435\u043A\u0442\u0438\u0432"
+    100056: "\u043E\u043A\u0443\u043B\u044F\u0440"
+    100058: "\u043E\u0441\u043D\u043E\u0432\u0430"
+    100060: "\u043F\u043B\u0430\u0441\u0442\u0438\u043D\u0430"
+    100062: "\u043F\u043E\u0434\u0441\u0442\u0430\u0432\u043A\u0430"
+    100064: "\u0440\u0443\u0447\u043A\u04301"
+    100066: "\u0440\u0443\u0447\u043A\u04302"
+    100068: "\u0440\u0443\u0447\u043A\u04303"
+    100070: "\u0441\u0442\u043E\u043B\u0435\u0448\u043D\u0438\u0446\u0430"
+    100072: "\u0441\u0442\u043E\u043B\u0438\u043A"
+    100074: "\u0442\u0443\u043C\u0431\u043B\u0435\u0440"
+    400000: arrow
+    400002: black001
+    400004: black002
+    400006: black003
+    400008: Box002
+    400010: Box003
+    400012: Box008
+    400014: Box009
+    400016: Box010
+    400018: Box011
+    400020: Cylinder002
+    400022: Cylinder003
+    400024: Cylinder014
+    400026: Cylinder016
+    400028: Cylinder018
+    400030: Cylinder019
+    400032: Cylinder020
+    400034: Cylinder021
+    400036: Cylinder022
+    400038: Cylinder023
+    400040: Cylinder024
+    400042: //RootNode
+    400044: Plane001
+    400046: texture_baraban
+    400048: "\u0420\u044B\u0447\u0430\u0433"
+    400050: "\u0431\u0430\u0440\u0430\u0431\u0430\u043D"
+    400052: "\u043C\u0438\u043A\u0440\u043E\u0441\u043A\u043E\u043F"
+    400054: "\u043E\u0431\u044A\u0435\u043A\u0442\u0438\u0432"
+    400056: "\u043E\u043A\u0443\u043B\u044F\u0440"
+    400058: "\u043E\u0441\u043D\u043E\u0432\u0430"
+    400060: "\u043F\u043B\u0430\u0441\u0442\u0438\u043D\u0430"
+    400062: "\u043F\u043E\u0434\u0441\u0442\u0430\u0432\u043A\u0430"
+    400064: "\u0440\u0443\u0447\u043A\u04301"
+    400066: "\u0440\u0443\u0447\u043A\u04302"
+    400068: "\u0440\u0443\u0447\u043A\u04303"
+    400070: "\u0441\u0442\u043E\u043B\u0435\u0448\u043D\u0438\u0446\u0430"
+    400072: "\u0441\u0442\u043E\u043B\u0438\u043A"
+    400074: "\u0442\u0443\u043C\u0431\u043B\u0435\u0440"
+    2100000: 04 - Default
+    2100002: 'Material #27'
+    2100004: 'Material #259'
+    2100006: 23 - Default
+    2100008: No Name
+    2100010: 16 - Default
+    2100012: 24 - Default
+    2100014: 'Material #274'
+    2100016: 'Material #260'
+    2300000: arrow
+    2300002: black001
+    2300004: black002
+    2300006: black003
+    2300008: Box002
+    2300010: Box003
+    2300012: Box008
+    2300014: Box009
+    2300016: Box010
+    2300018: Box011
+    2300020: Cylinder002
+    2300022: Cylinder003
+    2300024: Cylinder014
+    2300026: Cylinder016
+    2300028: Cylinder018
+    2300030: Cylinder019
+    2300032: Cylinder020
+    2300034: Cylinder021
+    2300036: Cylinder022
+    2300038: Cylinder023
+    2300040: Cylinder024
+    2300042: Plane001
+    2300044: texture_baraban
+    2300046: "\u0420\u044B\u0447\u0430\u0433"
+    2300048: "\u0431\u0430\u0440\u0430\u0431\u0430\u043D"
+    2300050: "\u043F\u043B\u0430\u0441\u0442\u0438\u043D\u0430"
+    2300052: "\u0440\u0443\u0447\u043A\u04303"
+    2300054: "\u0441\u0442\u043E\u043B\u0435\u0448\u043D\u0438\u0446\u0430"
+    2300056: "\u0441\u0442\u043E\u043B\u0438\u043A"
+    3300000: arrow
+    3300002: black001
+    3300004: black002
+    3300006: black003
+    3300008: Box002
+    3300010: Box003
+    3300012: Box008
+    3300014: Box009
+    3300016: Box010
+    3300018: Box011
+    3300020: Cylinder002
+    3300022: Cylinder003
+    3300024: Cylinder014
+    3300026: Cylinder016
+    3300028: Cylinder018
+    3300030: Cylinder019
+    3300032: Cylinder020
+    3300034: Cylinder021
+    3300036: Cylinder022
+    3300038: Cylinder023
+    3300040: Cylinder024
+    3300042: Plane001
+    3300044: texture_baraban
+    3300046: "\u0420\u044B\u0447\u0430\u0433"
+    3300048: "\u0431\u0430\u0440\u0430\u0431\u0430\u043D"
+    3300050: "\u043F\u043B\u0430\u0441\u0442\u0438\u043D\u0430"
+    3300052: "\u0440\u0443\u0447\u043A\u04303"
+    3300054: "\u0441\u0442\u043E\u043B\u0435\u0448\u043D\u0438\u0446\u0430"
+    3300056: "\u0441\u0442\u043E\u043B\u0438\u043A"
+    4300000: "\u0441\u0442\u043E\u043B\u0435\u0448\u043D\u0438\u0446\u0430"
+    4300002: "\u0431\u0430\u0440\u0430\u0431\u0430\u043D"
+    4300004: Cylinder016
+    4300006: black002
+    4300008: Cylinder014
+    4300010: black003
+    4300012: black001
+    4300014: Cylinder018
+    4300016: Cylinder019
+    4300018: Cylinder020
+    4300020: Cylinder003
+    4300022: Cylinder002
+    4300024: Box010
+    4300026: "\u0420\u044B\u0447\u0430\u0433"
+    4300028: "\u0440\u0443\u0447\u043A\u04303"
+    4300030: "\u043F\u043B\u0430\u0441\u0442\u0438\u043D\u0430"
+    4300032: texture_baraban
+    4300034: Box011
+    4300036: "\u0441\u0442\u043E\u043B\u0438\u043A"
+    4300038: Cylinder022
+    4300040: Cylinder021
+    4300042: Cylinder023
+    4300044: Cylinder024
+    4300046: Box009
+    4300048: Box008
+    4300050: Box003
+    4300052: Box002
+    4300054: arrow
+    4300056: Plane001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 10
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
