@@ -9,12 +9,20 @@ public class MagnifierMoving : MonoBehaviour
 
     [SerializeField]
     GameObject PapatternWithoutMagnifier;
+
+    [SerializeField]
+    GameObject MessageWithMagnifier;
+
+    [SerializeField]
+    GameObject MessageWithoutMagnifier;
     // Start is called before the first frame update
     void Start()
     {
         state = State.OnBench;
         PapatternWithMagnifier.SetActive(true);
+        MessageWithMagnifier.SetActive(true);
         PapatternWithoutMagnifier.SetActive(false);
+        MessageWithoutMagnifier.SetActive(false);
     }
     enum State
     {
@@ -36,7 +44,8 @@ public class MagnifierMoving : MonoBehaviour
                     StartCoroutine(PutOnTable());
                     PapatternWithMagnifier.SetActive (false);
                     PapatternWithoutMagnifier.SetActive(true);
-
+                    MessageWithMagnifier.SetActive(false);
+                    MessageWithoutMagnifier.SetActive(true);
                     state = State.OnTable;
                 }
                 break;
@@ -47,7 +56,8 @@ public class MagnifierMoving : MonoBehaviour
                     StartCoroutine(PutOnBench());
                     PapatternWithMagnifier.SetActive(true);
                     PapatternWithoutMagnifier.SetActive(false);
-
+                    MessageWithMagnifier.SetActive(true);
+                    MessageWithoutMagnifier.SetActive(false);
                     state = State.OnBench;
                 }
                 break;

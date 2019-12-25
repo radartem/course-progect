@@ -93,7 +93,7 @@ public class Tasks : MonoBehaviour
         if (w)
         {
             EventManager.Switch -= Task1;
-            taskText.text = ++numberOfTask + ". " + "Установите <color=#ffa500ff><b>желтый</b></color> светодиод" + "\n"+ "Примечание: воспользуйтесь тригером на элементе \"Спектральная щель\".";
+            taskText.text = "2. " + "Установите <color=#ffa500ff><b>желтый</b></color> светодиод" + "\n"+ "Примечание: воспользуйтесь тригером на элементе \"Спектральная щель\".";
             EventManager.ColorChanger += Task2;
             Open();
         }
@@ -104,7 +104,7 @@ public class Tasks : MonoBehaviour
         if (color == Color.yellow)
         {
             EventManager.ColorChanger -= Task2;
-            taskText.text = ++numberOfTask + ". " + "Уберити Линзу с оптической скомьи" + "\n" + "Примечание: нажмите на элемент \"Линза\".";
+            taskText.text = "3. " + "Уберити Линзу с оптической скомьи" + "\n" + "Примечание: нажмите на элемент \"Линза\".";
             EventManager.SwitchMagn += Task3;
             trigerMagnifier = true;
             currentColor = color;
@@ -127,24 +127,10 @@ public class Tasks : MonoBehaviour
         if (!mainView && isWorking)
         {
             EventManager.SwitchCan -= Task4;
-            taskText.text = "5. " + "Определите расстояние между центрами соседних интерференционных полос." + "\n"+ "Пимечание: Для этого необходимо измерить в малых делениях шкалы окулярного микрометра отсчетного микроскопа расстояние между серединами двух желтых полос, достаточно удаленных друг от друга, и разделить это число N на число п темных полос, находящихся между выбранными полосами. (значение N / n занести в таблицу).";
+            taskText.text = "5. <b>(1 из 3)</b>" + "Определите расстояние между центрами соседних интерференционных полос." + "\n"+ "Пимечание: Для этого необходимо измерить в малых делениях шкалы окулярного микрометра отсчетного микроскопа расстояние между серединами двух желтых полос, достаточно удаленных друг от друга, и разделить это число N на число п темных полос, находящихся между выбранными полосами. (значение N / n занести в таблицу).";
             EventManager.WritingValue += Task5;
             Open();
         }
-    }
-
-    //зеленый свет
-    bool Task4()
-    {
-        if (TaskControl(Color.yellow))
-        {
-            EventManager.WritingValue -= Task4;
-            taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиус второго кольца в малых делениях при <color=#008000ff><b>зелёном</b></color> свете";
-            EventManager.WritingValue += Task5;
-            Open();
-            return true;
-        }
-        else return false;
     }
 
     bool Task5()
@@ -152,180 +138,364 @@ public class Tasks : MonoBehaviour
         if (TaskControl(Color.yellow))
         {
             EventManager.WritingValue -= Task5;
-            taskText.text = ++numberOfTask + ". " + "Впишите в таблицу диметр третьего кольца в малых деления при <color=#008000ff><b>зелёном</b></color> светех";
+            taskText.text = "5. <b>(2 из 3)</b>" + "Определите расстояние между центрами соседних интерференционных полос." + "\n" + "Пимечание: Для этого необходимо измерить в малых делениях шкалы окулярного микрометра отсчетного микроскопа расстояние между серединами двух желтых полос, достаточно удаленных друг от друга, и разделить это число N на число п темных полос, находящихся между выбранными полосами. (значение N / n занести в таблицу).";
             EventManager.WritingValue += Task6;
-            Open(); return true;
+            Open();
+            return true;
         }
         else return false;
     }
-
     bool Task6()
     {
         if (TaskControl(Color.yellow))
         {
             EventManager.WritingValue -= Task6;
-            taskText.text = ++numberOfTask + ". " + "Значение радиуса кривизны линзы можно увидеть в таблице, теперь включите <color=#ffa500ff><b>жёлтый</b></color> свет";
-            EventManager.ColorChanger += Task7;
+            taskText.text = "5. <b>(3 из 3)</b>" + "Определите расстояние между центрами соседних интерференционных полос." + "\n" + "Пимечание: Для этого необходимо измерить в малых делениях шкалы окулярного микрометра отсчетного микроскопа расстояние между серединами двух желтых полос, достаточно удаленных друг от друга, и разделить это число N на число п темных полос, находящихся между выбранными полосами. (значение N / n занести в таблицу).";
+            EventManager.WritingValue += Task7;
             Open();
             return true;
         }
         else return false;
     }
 
-    //желтый свет
-    void Task7(Color color)
-    {
-        if (color == Color.yellow)
-        {
-            EventManager.ColorChanger -= Task7;
-            taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиуса первого кольца в малых делениях при <color=#ffa500ff><b>жёлтом</b></color> свете";
-            EventManager.WritingValue += Task8;
-            Open();
-        }
-    }
-
-    bool Task8()
+    //зеленый свет
+    bool Task7()
     {
         if (TaskControl(Color.yellow))
         {
-            EventManager.WritingValue -= Task8;
-            taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиус второго кольца в малых делениях при <color=#ffa500ff><b>жёлтом</b></color> свете";
-            EventManager.WritingValue += Task9;
-            Open(); return true;
+            EventManager.WritingValue -= Task7;
+            taskText.text = "6. " + "Верните Линзу на оптическую скомью" + "\n" + "Примечание: нажмите на элемент \"Линза\".";
+            EventManager.SwitchMagn += Task8;
+            trigerMagnifier = true;
+            Open();
+            return true;
         }
         else return false;
     }
 
-    bool Task9()
+    void Task8(bool MagnifierOn)
     {
-        if (TaskControl(Color.yellow))
+        if (MagnifierOn && trigerMagnifier)
         {
-            EventManager.WritingValue -= Task9;
-            taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиус третьего кольца в малых делениях при <color=#ffa500ff><b>жёлтом</b></color> свете";
+            EventManager.SwitchMagn -= Task8;
+            taskText.text = "7. " + "Посмотрите в окуляр микроскопа" + "\n" + "Примечание: нажмите на окуляр на элементе \"Остчетный микроскоп\".";
+            EventManager.SwitchCan += Task9;
+            Open();
+        }
+    }
+
+
+
+    void Task9(bool mainView)
+    {
+        if (!mainView && isWorking)
+        {
+            EventManager.SwitchCan -= Task9;
+            taskText.text = "8. " + "Измерьте в малых делениях шкалы окулярного микрометра отсчетного микроскопа расстояние z между серединами мнимых когерентных источников света. (значение Z занести в таблицу).";
             EventManager.WritingValue += Task10;
             Open();
-            return true;
         }
-        else return false;
     }
-
     bool Task10()
     {
         if (TaskControl(Color.yellow))
         {
-
             EventManager.WritingValue -= Task10;
-            taskText.text = ++numberOfTask + ". " + "Включите <color=#ff0000ff><b>красный</b></color> свет";
+            taskText.text = "9. " + "Установите <color=#008000ff><b>зеленый</b></color> светодиод" + "\n" + "Примечание: воспользуйтесь тригером на элементе \"Спектральная щель\".";
             EventManager.ColorChanger += Task11;
             Open();
             return true;
         }
-        else return false;
+        return false;
     }
 
-    //красный цвет
     void Task11(Color color)
     {
-        if (color == Color.red)
+        if (color == Color.green)
         {
             EventManager.ColorChanger -= Task11;
-            taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиус первого кольца в малых делениях при <color=#ff0000ff><b>красном</b></color> свете";
-            EventManager.WritingValue += Task12;
+            taskText.text = "10. " + "Уберити Линзу с оптической скомьи" + "\n" + "Примечание: нажмите на элемент \"Линза\".";
+            EventManager.SwitchMagn += Task12;
+            trigerMagnifier = true;
+            currentColor = color;
             Open();
         }
     }
 
-    bool Task12()
+    void Task12(bool MagnifierOn)
     {
-        if (TaskControl(Color.red))
+        if (!MagnifierOn && trigerMagnifier)
         {
-            EventManager.WritingValue -= Task12;
-            taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиус второго кольца в малых делениях при <color=#ff0000ff><b>красном</b></color> свете";
-            EventManager.WritingValue += Task13;
+            EventManager.SwitchMagn -= Task12;
+            taskText.text = "11. " + "Посмотрите в окуляр микроскопа" + "\n" + "Примечание: нажмите на окуляр на элементе \"Остчетный микроскоп\".";
+            EventManager.SwitchCan += Task13;
             Open();
-            return true;
         }
-        else return false;
     }
-
-    bool Task13()
+    void Task13(bool mainView)
     {
-        if (TaskControl(Color.red))
+        if (!mainView && isWorking)
         {
-
-            EventManager.WritingValue -= Task13;
-            taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиус третьего кольца в малых делениях при <color=#ff0000ff><b>красном</b></color> свете";
+            EventManager.SwitchCan -= Task4;
+            taskText.text = "12. <b>(1 из 3)</b>" + "Определите расстояние между центрами соседних интерференционных полос." + "\n" + "Пимечание: Для этого необходимо измерить в малых делениях шкалы окулярного микрометра отсчетного микроскопа расстояние между серединами двух желтых полос, достаточно удаленных друг от друга, и разделить это число N на число п темных полос, находящихся между выбранными полосами. (значение N / n занести в таблицу).";
             EventManager.WritingValue += Task14;
             Open();
-            return true;
         }
-        else return false;
     }
 
     bool Task14()
     {
-        if (TaskControl(Color.red))
+        if (TaskControl(Color.green))
         {
-
             EventManager.WritingValue -= Task14;
-            taskText.text = ++numberOfTask + ". " + "Включите <color=#0000ffff><b>синий</b></color> свет";
-            EventManager.ColorChanger += Task15;
+            taskText.text = "12. <b>(2 из 3)</b>" + "Определите расстояние между центрами соседних интерференционных полос." + "\n" + "Пимечание: Для этого необходимо измерить в малых делениях шкалы окулярного микрометра отсчетного микроскопа расстояние между серединами двух желтых полос, достаточно удаленных друг от друга, и разделить это число N на число п темных полос, находящихся между выбранными полосами. (значение N / n занести в таблицу).";
+            EventManager.WritingValue += Task15;
             Open();
             return true;
         }
         else return false;
     }
-
-    //синий цвет
-    void Task15(Color color)
+    bool Task15()
     {
-        if (TaskControl(Color.blue))
+        if (TaskControl(Color.green))
         {
-            EventManager.ColorChanger -= Task15;
-            taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиус первого кольца в малых делениях при <color=#0000ffff><b>синем</b></color> свете";
+            EventManager.WritingValue -= Task15;
+            taskText.text = "12. <b>(3 из 3)</b>" + "Определите расстояние между центрами соседних интерференционных полос." + "\n" + "Пимечание: Для этого необходимо измерить в малых делениях шкалы окулярного микрометра отсчетного микроскопа расстояние между серединами двух желтых полос, достаточно удаленных друг от друга, и разделить это число N на число п темных полос, находящихся между выбранными полосами. (значение N / n занести в таблицу).";
             EventManager.WritingValue += Task16;
             Open();
+            return true;
         }
+        else return false;
     }
 
+    //зеленый свет
     bool Task16()
     {
-        if (TaskControl(Color.blue))
+        if (TaskControl(Color.green))
         {
             EventManager.WritingValue -= Task16;
-            taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиус второго кольца в малых делениях при <color=#0000ffff><b>синем</b></color> свете";
-            EventManager.WritingValue += Task17;
+            taskText.text = "13. " + "Верните Линзу на оптическую скомью" + "\n" + "Примечание: нажмите на элемент \"Линза\".";
+            EventManager.SwitchMagn += Task17;
+            trigerMagnifier = true;
             Open();
             return true;
         }
         else return false;
     }
 
-    bool Task17()
+    void Task17(bool MagnifierOn)
     {
-        if (TaskControl(Color.blue))
+        if (MagnifierOn && trigerMagnifier)
         {
-            EventManager.WritingValue -= Task17;
-            taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиус третьего кольца в малых делениях при <color=#0000ffff><b>синем</b></color> свете";
-            EventManager.WritingValue += Task18;
+            EventManager.SwitchMagn -= Task17;
+            taskText.text = "14. " + "Посмотрите в окуляр микроскопа" + "\n" + "Примечание: нажмите на окуляр на элементе \"Остчетный микроскоп\".";
+            EventManager.SwitchCan += Task18;
             Open();
-            return true;
         }
-        else return false;
     }
 
-    bool Task18()
+
+
+    void Task18(bool mainView)
     {
-        if (TaskControl(Color.blue))
+        if (!mainView && isWorking)
         {
-            EventManager.WritingValue -= Task18;
+            EventManager.SwitchCan -= Task18;
+            taskText.text = "15. " + "Измерьте в малых делениях шкалы окулярного микрометра отсчетного микроскопа расстояние z между серединами мнимых когерентных источников света. (значение Z занести в таблицу).";
+            EventManager.WritingValue += Task19;
+            Open();
+        }
+    }
+    bool Task19()
+    {
+        if (TaskControl(Color.green))
+        {
+            EventManager.WritingValue -= Task19;
             taskText.text = ++numberOfTask + ". " + "Отлично, все измерения сняты. Теперь ознакомтесь с результатами измерений в таблице и проведите их анализ, а также подготовьте выводы в соответствии с целью работы.";
             Open();
             return true;
         }
         else return false;
     }
+    //bool Task5()
+    //{
+    //    if (TaskControl(Color.yellow))
+    //    {
+    //        EventManager.WritingValue -= Task5;
+    //        taskText.text = ++numberOfTask + ". " + "Впишите в таблицу диметр третьего кольца в малых деления при <color=#008000ff><b>зелёном</b></color> светех";
+    //        EventManager.WritingValue += Task6;
+    //        Open(); return true;
+    //    }
+    //    else return false;
+    //}
 
+    //bool Task6()
+    //{
+    //    if (TaskControl(Color.yellow))
+    //    {
+    //        EventManager.WritingValue -= Task6;
+    //        taskText.text = ++numberOfTask + ". " + "Значение радиуса кривизны линзы можно увидеть в таблице, теперь включите <color=#ffa500ff><b>жёлтый</b></color> свет";
+    //        EventManager.ColorChanger += Task7;
+    //        Open();
+    //        return true;
+    //    }
+    //    else return false;
+    //}
+
+    ////желтый свет
+    //void Task7(Color color)
+    //{
+    //    if (color == Color.yellow)
+    //    {
+    //        EventManager.ColorChanger -= Task7;
+    //        taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиуса первого кольца в малых делениях при <color=#ffa500ff><b>жёлтом</b></color> свете";
+    //        EventManager.WritingValue += Task8;
+    //        Open();
+    //    }
+    //}
+
+    //bool Task8()
+    //{
+    //    if (TaskControl(Color.yellow))
+    //    {
+    //        EventManager.WritingValue -= Task8;
+    //        taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиус второго кольца в малых делениях при <color=#ffa500ff><b>жёлтом</b></color> свете";
+    //        EventManager.WritingValue += Task9;
+    //        Open(); return true;
+    //    }
+    //    else return false;
+    //}
+
+    //bool Task9()
+    //{
+    //    if (TaskControl(Color.yellow))
+    //    {
+    //        EventManager.WritingValue -= Task9;
+    //        taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиус третьего кольца в малых делениях при <color=#ffa500ff><b>жёлтом</b></color> свете";
+    //        EventManager.WritingValue += Task10;
+    //        Open();
+    //        return true;
+    //    }
+    //    else return false;
+    //}
+
+    //bool Task10()
+    //{
+    //    if (TaskControl(Color.yellow))
+    //    {
+
+    //        EventManager.WritingValue -= Task10;
+    //        taskText.text = ++numberOfTask + ". " + "Включите <color=#ff0000ff><b>красный</b></color> свет";
+    //        EventManager.ColorChanger += Task11;
+    //        Open();
+    //        return true;
+    //    }
+    //    else return false;
+    //}
+
+    ////красный цвет
+    //void Task11(Color color)
+    //{
+    //    if (color == Color.red)
+    //    {
+    //        EventManager.ColorChanger -= Task11;
+    //        taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиус первого кольца в малых делениях при <color=#ff0000ff><b>красном</b></color> свете";
+    //        EventManager.WritingValue += Task12;
+    //        Open();
+    //    }
+    //}
+
+    //bool Task12()
+    //{
+    //    if (TaskControl(Color.red))
+    //    {
+    //        EventManager.WritingValue -= Task12;
+    //        taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиус второго кольца в малых делениях при <color=#ff0000ff><b>красном</b></color> свете";
+    //        EventManager.WritingValue += Task13;
+    //        Open();
+    //        return true;
+    //    }
+    //    else return false;
+    //}
+
+    //bool Task13()
+    //{
+    //    if (TaskControl(Color.red))
+    //    {
+
+    //        EventManager.WritingValue -= Task13;
+    //        taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиус третьего кольца в малых делениях при <color=#ff0000ff><b>красном</b></color> свете";
+    //        EventManager.WritingValue += Task14;
+    //        Open();
+    //        return true;
+    //    }
+    //    else return false;
+    //}
+
+    //bool Task14()
+    //{
+    //    if (TaskControl(Color.red))
+    //    {
+
+    //        EventManager.WritingValue -= Task14;
+    //        taskText.text = ++numberOfTask + ". " + "Включите <color=#0000ffff><b>синий</b></color> свет";
+    //        EventManager.ColorChanger += Task15;
+    //        Open();
+    //        return true;
+    //    }
+    //    else return false;
+    //}
+
+    ////синий цвет
+    //void Task15(Color color)
+    //{
+    //    if (TaskControl(Color.blue))
+    //    {
+    //        EventManager.ColorChanger -= Task15;
+    //        taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиус первого кольца в малых делениях при <color=#0000ffff><b>синем</b></color> свете";
+    //        EventManager.WritingValue += Task16;
+    //        Open();
+    //    }
+    //}
+
+    //bool Task16()
+    //{
+    //    if (TaskControl(Color.blue))
+    //    {
+    //        EventManager.WritingValue -= Task16;
+    //        taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиус второго кольца в малых делениях при <color=#0000ffff><b>синем</b></color> свете";
+    //        EventManager.WritingValue += Task17;
+    //        Open();
+    //        return true;
+    //    }
+    //    else return false;
+    //}
+
+    //bool Task17()
+    //{
+    //    if (TaskControl(Color.blue))
+    //    {
+    //        EventManager.WritingValue -= Task17;
+    //        taskText.text = ++numberOfTask + ". " + "Впишите в таблицу радиус третьего кольца в малых делениях при <color=#0000ffff><b>синем</b></color> свете";
+    //        EventManager.WritingValue += Task18;
+    //        Open();
+    //        return true;
+    //    }
+    //    else return false;
+    //}
+
+    //bool Task18()
+    //{
+    //    if (TaskControl(Color.blue))
+    //    {
+    //        EventManager.WritingValue -= Task18;
+    //        taskText.text = ++numberOfTask + ". " + "Отлично, все измерения сняты. Теперь ознакомтесь с результатами измерений в таблице и проведите их анализ, а также подготовьте выводы в соответствии с целью работы.";
+    //        Open();
+    //        return true;
+    //    }
+    //    else return false;
+    //}
+    static int counter=0;
     bool TaskControl(Color color)
     {
         if (!isWorking)
