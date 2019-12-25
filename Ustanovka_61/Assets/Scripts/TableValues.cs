@@ -84,7 +84,7 @@ public class TableValues : MonoBehaviour
             {
                 if (counter < 3)
                 {
-                    Nn[counter].text = newValue.ToString("f3");
+                    Nn[counter].text = newValue.ToString("f2");
                     counter++;
                     if (counter == 3)
                     {
@@ -92,21 +92,57 @@ public class TableValues : MonoBehaviour
                         foreach (var v in Nn)
                             val += double.Parse(v.text);
                         dx = val / 3 * gamVal;
-                        DX.text = dx.ToString("f3");
+                        DX.text = dx.ToString("f2");
                     }
                 }
                 else
                 {
+                    double val = 0;
+                    foreach (var v in Nn)
+                        val += double.Parse(v.text);
+                    dx = val / 3 * gamVal;
+
                     Z.text = newValue.ToString("f0");
                     counter = 0;
                     h = newValue * gamVal;
-                    H.text = h.ToString("f3");
+                    H.text = h.ToString("f2");
                     d = a * h / b;
-                    D.text = "d = " + d.ToString("f3") + "мм";
-                    lm = dx / l * d;
-                    Lm.text = lm.ToString("f3");
+                    D.text = "d = " + d.ToString("f2") + "мм";
+                    lm = dx / l * d*1000;
+                    Lm.text = lm.ToString("f1");
                 }
             }
         }
     }
+
+    public void Clean()
+    {
+        yellowNn[0].text="---";
+        yellowNn[1].text = "---";
+        yellowNn[2].text = "---";
+
+        greenNn[0].text = "---";
+        greenNn[1].text = "---";
+        greenNn[2].text = "---";
+
+        yellowDX.text="----";
+
+        greenDX.text="----";
+
+        yellowZ.text="----";
+
+        greenZ.text="----";
+
+        yellowH.text="----";
+
+        greenH.text="----";
+
+        yellowLm.text="----";
+
+        greenLm.text="----";
+
+        D.text="----";
+
+        textInput.text="";
+}
 }

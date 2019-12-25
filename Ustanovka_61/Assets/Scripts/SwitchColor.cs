@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SwitchColor : MonoBehaviour
 {
     [SerializeField]
     Transform targetPos;
 
+    [SerializeField]
+    new Image pattern;
     private enum State
     {
         green=1,
@@ -28,7 +31,7 @@ public class SwitchColor : MonoBehaviour
             case State.yellow:
                 {
                     StartCoroutine(TrigerRotate(1));
-
+                    pattern.rectTransform.sizeDelta = new Vector2(700F,600F);
                     EventManager.ChangeColor(Color.green);
                     state = State.green;
                 }
@@ -36,7 +39,7 @@ public class SwitchColor : MonoBehaviour
             case State.green:
                 {
                     StartCoroutine(TrigerRotate(-1));
-
+                    pattern.rectTransform.sizeDelta = new Vector2(750F, 600F);
                     EventManager.ChangeColor(Color.yellow);
                     state = State.yellow;
                 }
@@ -53,6 +56,12 @@ public class SwitchColor : MonoBehaviour
             transform.RotateAround(targetPos.position, Vector3.right, side * 16f);
             yield return new WaitForSeconds(0.05f);
         }
+    }
+
+
+    void ChangeSize(Image patt, float value)
+    {
+        
     }
 }
 

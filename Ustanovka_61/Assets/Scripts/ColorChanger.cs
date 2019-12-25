@@ -35,4 +35,5 @@ public class ColorChanger : MonoBehaviour
         if (renderer.enabled) renderer.color = color;
         memoryColor = color;
     }
+
 }
